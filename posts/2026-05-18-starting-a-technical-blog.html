@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../">
+  <title>搭建这个博客：从空目录到 GitHub Pages · Dull Circuit Notes</title>
+  <meta name="description" content="记录这个站点的第一版设计和维护方式。">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="主导航">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Dull Circuit Notes</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="archive.html">Archive</a>
+        <button class="icon-button" type="button" data-search-open aria-label="搜索">⌕</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>搭建这个博客：从空目录到 GitHub Pages</h1>
+      <p>Posted by LCStayingdullCircuit on May 18, 2026</p>
+    </div>
+  </header>
+
+  <main class="article-shell article-body">
+    <p>这个站点的第一版先选择纯静态结构。理由很简单：GitHub Pages 可以直接托管，页面加载快，后续维护成本低，也不会因为本地缺少 Ruby、Node 或某个主题依赖就写不了文章。</p>
+
+    <h2>目录结构</h2>
+    <p>当前结构只保留博客需要的核心部分：首页、归档页、About 页、文章页、样式、脚本和图片资源。</p>
+    <pre><code>LCStayingdullCircuit.github.io/
+  index.html
+  about.html
+  archive.html
+  posts/
+  assets/
+    css/
+    js/
+    img/</code></pre>
+
+    <h2>为什么先不引入复杂构建</h2>
+    <p>博客最重要的不是技术栈，而是稳定地写。纯静态页面的缺点是新增文章时需要手动维护文章列表，但优点是所有行为都透明，出了问题也容易定位。</p>
+
+    <blockquote>后续如果文章变多，再迁移到 Jekyll、Astro 或 Hugo 都不晚。第一版应该先让内容发布链路跑起来。</blockquote>
+
+    <h2>下一步</h2>
+    <p>后面可以把文章源文件改成 Markdown，再用一个轻量脚本生成 HTML。这样既保留静态部署的简单性，也能让写作体验更接近正常博客。</p>
+  </main>
+
+  <div class="search-panel" data-search-panel>
+    <div class="search-box">
+      <div class="search-top">
+        <input data-search-input type="search" placeholder="$ grep..." aria-label="搜索文章">
+        <button class="icon-button" type="button" data-search-close aria-label="关闭搜索">×</button>
+      </div>
+      <div class="search-results" data-search-results></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">Copyright © <span data-current-year></span> Dull Circuit Notes · Powered by GitHub Pages</div>
+  </footer>
+
+  <script src="assets/js/posts.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

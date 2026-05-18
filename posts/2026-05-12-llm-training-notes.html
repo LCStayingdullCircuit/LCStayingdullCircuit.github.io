@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../">
+  <title>大模型训练笔记：先把几个维度分清楚 · Dull Circuit Notes</title>
+  <meta name="description" content="大模型训练入门时需要先分清的几个维度。">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="主导航">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Dull Circuit Notes</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="archive.html">Archive</a>
+        <button class="icon-button" type="button" data-search-open aria-label="搜索">⌕</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>大模型训练笔记：先把几个维度分清楚</h1>
+      <p>Posted by LCStayingdullCircuit on May 12, 2026</p>
+    </div>
+  </header>
+
+  <main class="article-shell article-body">
+    <p>学习大模型训练时，很容易同时遇到 batch size、显存、ZeRO、FSDP、tensor parallel、pipeline parallel、gradient accumulation 等词。它们不是同一层的问题，混在一起看会很累。</p>
+
+    <h2>先看资源</h2>
+    <p>训练的核心资源通常是计算、显存、网络和存储。一个方案解决了显存问题，不代表它也解决了通信问题；一个方案提高了吞吐，也可能让调试和容错更困难。</p>
+
+    <h2>再看并行</h2>
+    <p>数据并行主要复制模型、切分数据；张量并行切模型内部计算；流水线并行切层；序列或上下文并行则进一步处理长上下文场景。每一种并行方式都在改变量的放置位置和通信路径。</p>
+
+    <h2>最后看代价</h2>
+    <p>任何训练优化都不是免费的。需要问三个问题：节省了什么、增加了什么、在哪个规模下值得。把这三件事问清楚，很多术语就会自然落到具体位置上。</p>
+  </main>
+
+  <div class="search-panel" data-search-panel>
+    <div class="search-box">
+      <div class="search-top">
+        <input data-search-input type="search" placeholder="$ grep..." aria-label="搜索文章">
+        <button class="icon-button" type="button" data-search-close aria-label="关闭搜索">×</button>
+      </div>
+      <div class="search-results" data-search-results></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">Copyright © <span data-current-year></span> Dull Circuit Notes · Powered by GitHub Pages</div>
+  </footer>
+
+  <script src="assets/js/posts.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

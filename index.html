@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dull Circuit Notes</title>
+  <meta name="description" content="LCStayingdullCircuit 的个人技术博客，记录大模型、系统工程和学习笔记。">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="主导航">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Dull Circuit Notes</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="archive.html">Archive</a>
+        <button class="icon-button" type="button" data-search-open aria-label="搜索">⌕</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Dull Circuit Notes</h1>
+      <p>记录工程、模型、系统和那些暂时没想明白的问题。</p>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section aria-label="最新文章">
+      <article class="post-preview">
+        <h2><a href="posts/2026-05-18-starting-a-technical-blog.html">搭建这个博客：从空目录到 GitHub Pages</a></h2>
+        <p class="excerpt">记录这个站点的第一版设计：为什么选择纯静态结构、如何组织页面、以及之后怎么把文章维护得轻一点。</p>
+        <div class="meta">
+          <span>Posted by LCStayingdullCircuit</span>
+          <span class="dot"></span>
+          <time datetime="2026-05-18">May 18, 2026</time>
+        </div>
+      </article>
+
+      <article class="post-preview">
+        <h2><a href="posts/2026-05-12-llm-training-notes.html">大模型训练笔记：先把几个维度分清楚</a></h2>
+        <p class="excerpt">把 batch、显存、通信、并行策略这些概念先拆成可观察的维度，避免一开始就掉进术语细节。</p>
+        <div class="meta">
+          <span>Posted by LCStayingdullCircuit</span>
+          <span class="dot"></span>
+          <time datetime="2026-05-12">May 12, 2026</time>
+        </div>
+      </article>
+
+      <article class="post-preview">
+        <h2><a href="posts/2026-04-28-system-reading-method.html">读系统文章时，我会先找这四件事</a></h2>
+        <p class="excerpt">面对一篇系统设计或论文解读文章，先定位目标、约束、核心机制和代价，再回头看实现细节。</p>
+        <div class="meta">
+          <span>Posted by LCStayingdullCircuit</span>
+          <span class="dot"></span>
+          <time datetime="2026-04-28">Apr 28, 2026</time>
+        </div>
+      </article>
+    </section>
+
+    <aside class="sidebar" aria-label="侧栏">
+      <section class="side-section">
+        <h3>Featured Tags</h3>
+        <div class="tag-cloud">
+          <a href="archive.html?tag=LLM">LLM</a>
+          <a href="archive.html?tag=分布式训练">分布式训练</a>
+          <a href="archive.html?tag=系统">系统</a>
+          <a href="archive.html?tag=工程笔记">工程笔记</a>
+          <a href="archive.html?tag=学习路径">学习路径</a>
+          <a href="archive.html?tag=博客">博客</a>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h3>About Me</h3>
+        <img class="avatar" src="assets/img/avatar.png" alt="LCStayingdullCircuit avatar">
+        <p>写一点大模型、分布式系统、工程实践和读书笔记。先把问题讲清楚，再追求结论漂亮。</p>
+        <div class="social-row" aria-label="社交链接">
+          <a href="https://github.com/LCStayingdullCircuit" aria-label="GitHub">GH</a>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h3>Friends</h3>
+        <div class="tag-cloud">
+          <a href="https://github.com/LCStayingdullCircuit">GitHub</a>
+          <a href="https://ilyee.github.io/">Ilyee Blog</a>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <div class="search-panel" data-search-panel>
+    <div class="search-box">
+      <div class="search-top">
+        <input data-search-input type="search" placeholder="$ grep..." aria-label="搜索文章">
+        <button class="icon-button" type="button" data-search-close aria-label="关闭搜索">×</button>
+      </div>
+      <div class="search-results" data-search-results></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">Copyright © <span data-current-year></span> Dull Circuit Notes · Powered by GitHub Pages</div>
+  </footer>
+
+  <script src="assets/js/posts.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
